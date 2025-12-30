@@ -69,3 +69,5 @@ f1, f2, f3 = count()
 
 for f in count():
     print(f())
+
+print('gitgit')
