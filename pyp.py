@@ -41,5 +41,31 @@ def by_name(t):
 def by_age(t):
     return -t[1]
 
-print(sorted(L, key=lambda x: x[0]))
+#print(sorted(L, key=lambda x: x[0]))
 #l2=sorted(l1, key=lambda x:L(1))
+f=lambda x:x[0]+x[1]
+print(f([1,2,3,4]))
+def inc():
+    x = 0
+    def fn():
+        #nonlocal x
+        #x =x + 1
+        return x+1
+    return fn
+
+f = inc()
+print(f()) # 1
+
+def count():
+    fs = []
+    for i in range(1, 4):
+        def f():
+             nonlocal i
+             return i*i
+        fs.append(f)
+    return fs
+
+f1, f2, f3 = count()
+
+for f in count():
+    print(f())
