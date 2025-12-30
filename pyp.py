@@ -34,3 +34,12 @@ def normalize(l):
 L1 = ['adam', 'LISA', 'barT']
 L2 = list(map(normalize, L1))
 print(L2)
+
+L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+def by_name(t):
+    return t[0]
+def by_age(t):
+    return -t[1]
+
+print(sorted(L, key=lambda x: x[0]))
+#l2=sorted(l1, key=lambda x:L(1))
